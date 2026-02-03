@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,6 +6,8 @@
   text-align: center;
 }
 
+=======
+>>>>>>> 52f0a54 (DWEC ej)
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,3 +43,33 @@
 .read-the-docs {
   color: #888;
 }
+<<<<<<< HEAD
+=======
+
+
+.fondoHeader {
+  background-color: grey;
+  min-height: 15vh;
+}
+
+.fondoRoles {
+  background-color: rgb(195, 195, 195);
+  min-height: 85vh;
+}
+
+.fondoDashboard {
+  background-color: greenyellow;
+  min-height: 85vh;
+}
+
+#root{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid{
+  width: 100%;
+  height: 100%;
+}
+>>>>>>> 52f0a54 (DWEC ej)
