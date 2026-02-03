@@ -8,7 +8,7 @@ const Cabecera = (props) => {
     return(
         <header>
             <h1>HEADER</h1>
-            <p>{props.usuario}</p>
+            <p>Isabel</p>
         </header>
     )
 }
