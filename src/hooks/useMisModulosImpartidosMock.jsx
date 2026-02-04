@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import modulos from "../mocks/mock-impartidos.js"
 import UserContext from "../contextos/UserContext.jsx"
 
-function useMisModulosMatriculados() {
+function useMisModulosImpartidos() {
     
     const user = useContext(UserContext);
 
@@ -15,4 +15,4 @@ function useMisModulosMatriculados() {
 
 }
 
-export default useMisModulosMatriculados;
+export default useMisModulosImpartidos;

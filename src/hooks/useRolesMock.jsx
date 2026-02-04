@@ -1,18 +1,18 @@
 import { useContext, useState } from "react";
-import modulos from "../mocks/mock-impartidos.js"
+import roles from '../mocks/mock-roles.js'
 import UserContext from "../contextos/UserContext.jsx"
 
-function useMisModulosMatriculados() {
-    
+function useRoles() {
+
     const user = useContext(UserContext);
 
     const [buscando, setBuscando] = useState(false);
 
-    const [lista, setLista] = useState(modulos[user].lista);
+    const [lista, setLista] = useState(roles[user].roles);
 
     return {buscando, lista}
 
 
 }
 
-export default useMisModulosMatriculados;
+export default useRoles;

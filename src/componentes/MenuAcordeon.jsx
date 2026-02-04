@@ -16,7 +16,7 @@ const Menu = () => {
     const modulosMatriculados = useMisModulosMatriculados();
 
     function manejarRol(rol) {
-        switch (rol) {
+        switch (rol.name) {
 
             case 'administrador':
                 return mockAdministrador.administrador.map((value, index) => (
@@ -32,6 +32,9 @@ const Menu = () => {
                 return modulosMatriculados.lista.map((value, index) => (
                     <RutasAcordeon key={index} nombre={value.nombre} ruta={`/funcionalidadestudiante/${value.id}`} />
                 ));
+            
+            default:
+                return null;
         }
 
     }
@@ -45,7 +48,7 @@ const Menu = () => {
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
-                    <Typography component="span">{rol}</Typography>
+                    <Typography component="span">{rol.name}</Typography>
                 </AccordionSummary>
                 {
                     manejarRol(rol)
