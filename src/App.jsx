@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 
 function App() {
   let usuario = "Victor";
-  let token = "SAJFY67";
+  let token = "1|NceLevwb9HZvNJpzofB8o5b0W2ZOkAIecBelNO5Ocbd950c2";
   let menú = "Inicio";
 
   const [user, setUser] = useState(usuario);

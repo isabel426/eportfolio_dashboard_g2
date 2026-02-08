@@ -4,12 +4,13 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import datosEvidencia from '../mocks/mock-tareasRA.js'
 import { useState } from 'react';
 import { OutlinedInput } from '@mui/material';
+import useTareasPorRA from '../hooks/useTareasPorRA';
 
 const SelectorTareaRA = (props) => {
 
+    const tareasPorRA = useTareasPorRA();
     const [estadoEvidencia, setEstadoEvidencia] = useState("");
 
     const handleChange = (event) => {
@@ -21,6 +22,7 @@ const SelectorTareaRA = (props) => {
         return <MenuItem value={evidencia} key={index}>{evidencia.observaciones}</MenuItem>
     }
 
+    console.log(tareasPorRA);
 
     return (
         <Box sx={{ minWidth: 120 }}>
@@ -35,7 +37,7 @@ const SelectorTareaRA = (props) => {
                     onChange={handleChange}
                     input={<OutlinedInput />}
                 >
-                            { datosEvidencia.lista.map(generarEvidencia) }
+                            { tareasPorRA.lista.map(generarEvidencia) }
                 </Select>
         </FormControl>
         </Box >
