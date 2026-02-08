@@ -1,16 +1,30 @@
 import { useContext, useState } from "react";
-import modulos from "../mocks/mock-impartidos.js"
-import UserContext from "../contextos/UserContext.jsx"
+import { useEffect } from "react";
+import getAllModulosMatriculados from "../servicios/getAllModulosMatriculados.js";
 
 function useMisModulosMatriculados() {
-    
-    const user = useContext(UserContext);
 
+    const [lista, setLista] = useState([]);
     const [buscando, setBuscando] = useState(false);
 
-    const [lista, setLista] = useState(modulos[user].lista);
+    const token = "1|munpzZNeK8GuxGvY1ZfHkc43wy05pABfFcdFsCu208952e38";
 
-    return {buscando, lista}
+    function obtenerModulosMatriculados() {
+
+        setBuscando(true);
+
+        getAllModulosMatriculados(token).then((modulos) => {
+
+            setLista(modulos?.data || []);
+            setBuscando(false);
+
+        });
+    }
+
+    useEffect(obtenerModulosMatriculados, []);
+
+
+    return { buscando, lista }
 
 
 }

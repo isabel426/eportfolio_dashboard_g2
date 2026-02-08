@@ -7,6 +7,7 @@ import Dashboard from './componentes/Dashboard'
 import Roles from './componentes/Roles'
 import TokenContext from './contextos/TokenContext'
 import UserContext from './contextos/UserContext'
+import { useEffect } from 'react'
 
 function App() {
   let usuario = "Victor";
@@ -14,6 +15,12 @@ function App() {
   let menú = "Inicio";
 
   const [user, setUser] = useState(usuario);
+
+  useEffect(() => {
+    fetch("http://eportfolio.test/sanctum/csrf-cookie", {
+      credentials: "include"
+    });
+  }, []);
 
   return (
     <>
