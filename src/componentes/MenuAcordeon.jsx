@@ -16,7 +16,7 @@ const Menu = () => {
     const modulosMatriculados = useMisModulosMatriculados();
 
     function manejarRol(rol) {
-        switch (rol.name) {
+        switch (rol) {
 
             case 'administrador':
                 return mockAdministrador.administrador.map((value, index) => (
@@ -48,7 +48,7 @@ const Menu = () => {
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
-                    <Typography component="span">{rol.name}</Typography>
+                    <Typography component="span">{rol}</Typography>
                 </AccordionSummary>
                 {
                     manejarRol(rol)

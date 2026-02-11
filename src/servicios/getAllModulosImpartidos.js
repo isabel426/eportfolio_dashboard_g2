@@ -1,15 +1,12 @@
-function getAllModulosImpartidos(token) {//servicio
+function getAllModulosImpartidos() {//servicio
 
-    const URL = "http://eportfolio.test/api/v1/modulos-impartidos";
+    const URL = "https://mocki.io/v1/52c87ee6-b873-444b-97c9-1ee75ba5fcef";
 
 
     return fetch(URL, {
         method: "GET",
-        credentials: "include",
         headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json",
-            "Authorization": `Bearer ${token}`
         },
         
     })

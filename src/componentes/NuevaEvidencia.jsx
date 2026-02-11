@@ -4,7 +4,7 @@ import SelectorTareaRA from "./SelectorTareaRA";
 
 const NuevaEvidencia = () => {
 
-    const [tarea, setTarea] = useState({id: 5, descripcion: "Hola"});
+    const [tarea, setTarea] = useState({id: 10, descripcion: "Hola"});
 
     function manejarTarea(tareaSeleccionada) {
         setTarea(tareaSeleccionada);

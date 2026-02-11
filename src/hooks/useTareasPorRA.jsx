@@ -12,9 +12,11 @@ function useTareasPorRA() {
 
         setBuscando(true);
 
-        getTareasPorRA().then((modulos) => {
+        getTareasPorRA().then((data) => {
 
-            setLista(modulos?.data || []);
+            const tareas = data[0]?.lista || []
+
+            setLista(tareas);
             setBuscando(false);
 
         });

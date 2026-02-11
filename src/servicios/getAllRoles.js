@@ -1,6 +1,6 @@
 function getAllRoles() {//servicio
 
-    const URL = "http://eportfolio.test/api/v1/roles";
+    const URL = "https://mocki.io/v1/17290d46-4fe8-47b3-9c14-8888eba7f345";
 
     return fetch(URL)
         .then((response) => {

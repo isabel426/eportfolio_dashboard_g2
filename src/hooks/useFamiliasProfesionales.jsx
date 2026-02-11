@@ -14,7 +14,7 @@ function useFamiliasProfesionales() {
 
         getAllFamiliasProfesionales().then((familias) => {
 
-            setLista(familias.data);
+            setLista(familias || []);
             setBuscando(false);
 
         });
