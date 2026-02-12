@@ -16,12 +16,6 @@ function App() {
 
   const [user, setUser] = useState(usuario);
 
-  useEffect(() => {
-    fetch("http://eportfolio.test/sanctum/csrf-cookie", {
-      credentials: "include"
-    });
-  }, []);
-
   return (
     <>
       <div className='container-fluid'>
